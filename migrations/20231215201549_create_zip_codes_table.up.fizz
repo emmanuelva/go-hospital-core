@@ -1,0 +1,6 @@
+create_table("zip_codes") {
+  t.Column("id", "uuid", {primary: true})
+  t.Column("city_id", "uuid")
+  t.Column("code", "integer", {})
+  t.ForeignKey("city_id", {"cities": ["id"]}, {"on_delete": "restrict"})
+}

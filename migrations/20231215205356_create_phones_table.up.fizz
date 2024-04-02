@@ -1,0 +1,8 @@
+sql("CREATE TYPE phone_type AS ENUM ('HOME', 'OFFICE', 'CELL');")
+
+create_table("phones") {
+  t.Column("id", "uuid", {primary: true})
+  t.Column("number", "string", {})
+  t.Column("extension", "string", {"null": true})
+  t.Column("phone_type", "phone_type", {"null": true})
+}

@@ -1,0 +1,7 @@
+create_table("cities") {
+  t.Column("id", "uuid", {primary: true})
+  t.Column("country_state_id", "uuid")
+  t.Column("name", "string", {})
+  t.Column("alias", "string", {"null": true})
+  t.ForeignKey("country_state_id", {"country_states": ["id"]}, {"on_delete": "restrict"})
+}

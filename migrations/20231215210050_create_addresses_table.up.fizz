@@ -1,0 +1,11 @@
+create_table("addresses") {
+  t.Column("id", "uuid", {primary: true})
+  t.Column("zip_id", "uuid")
+  t.Column("street", "string", {})
+  t.Column("normalized_street", "string", {})
+  t.Column("number", "string", {})
+  t.Column("external_number", "string", {"null": true})
+  t.Column("colony", "string", {})
+  t.Column("normalized_colony", "string", {})
+  t.ForeignKey("zip_id", {"zip_codes": ["id"]}, {"on_delete": "restrict"})
+}
