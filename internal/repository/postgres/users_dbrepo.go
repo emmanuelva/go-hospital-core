@@ -3,10 +3,10 @@ package postgres
 import (
 	"context"
 	"database/sql"
+	"github.com/emmanuelva/go-hospital-core/internal/models"
+	"github.com/emmanuelva/go-hospital-core/internal/repository"
 	"github.com/gofrs/uuid"
 	"golang.org/x/crypto/bcrypt"
-	"hospital-ma/internal/models"
-	"hospital-ma/internal/repository"
 	"log"
 	"time"
 )

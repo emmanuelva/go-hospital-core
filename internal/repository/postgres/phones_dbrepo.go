@@ -3,9 +3,9 @@ package postgres
 import (
 	"context"
 	"database/sql"
+	"github.com/emmanuelva/go-hospital-core/internal/models"
+	"github.com/emmanuelva/go-hospital-core/internal/repository"
 	"github.com/gofrs/uuid"
-	"hospital-ma/internal/models"
-	"hospital-ma/internal/repository"
 	"log"
 	"regexp"
 	"time"
